@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
+    "sass": "^1.77.6",
     "vue": "^3.4.21",
     "vue-writer": "^2.0.2"
   },

@@ -1,8 +1,8 @@
 <template>
   <header class="header">
-    <div class="container header-container">
-      <img src="@/assets/logo.png" alt="Logo" class="logo" />
-      <ul class="header_nav-list">
+    <div class="container header__container">
+      <img src="@/assets/img/logo.png" alt="Logo" />
+      <ul class="header__nav-list">
         <li>
           <a class="header__nav-link" href="#">Home</a>
         </li>
@@ -17,34 +17,33 @@
   </header>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
   font-family: var(--secondary-font);
-}
 
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 60px;
+  }
 
-.header_nav-list {
-  display: flex;
-  gap: 90px;
+  &__nav-list {
+    display: flex;
+    gap: 60px;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 22px;
-}
+    @include breakpoint($screen-lg) {
+      gap: 90px;
+    }
+  }
 
-.header__nav-link {
-  font-size: 20px;
-  transition: color 250ms var(--timing-function);
-}
+  &__nav-link {
+    font-size: 20px;
+    transition: color 250ms var(--timing-function);
 
-.header__nav-link:hover {
-  color: var(--hover-color);
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
 }
 </style>
