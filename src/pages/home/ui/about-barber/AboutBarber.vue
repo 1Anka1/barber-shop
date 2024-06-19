@@ -87,6 +87,7 @@ export default {
   &__contact-btn {
     cursor: pointer;
     background-color: var(--primary-color);
+    color: var(--secondary-color);
     border: 0;
     border-radius: 1.5rem;
     font-weight: 200;
