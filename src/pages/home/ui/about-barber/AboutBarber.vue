@@ -3,8 +3,8 @@
     <div class="container about-barber_barber-content">
       <div class="about-barber_barber-details">
         <h1 class="about-barber_title">
-          Cześć,
-          <br />Mam na imię Ines!
+          <VueWriter :array="['Cześć, ']" :typeSpeed="70" :iterations="1" />
+          <VueWriter :array="['Mam na imię Ines!']" :typeSpeed="70" :start="600" :iterations="1" />
         </h1>
         <p class="about-barber_information">
           Jestem doświadczonym barberem z wieloletnim doświadczeniem w strzyżeniu i stylizację
@@ -14,18 +14,24 @@
           Przekształćmy razem Twoją pasję w doświadczenie!
         </p>
         <div class="about-barber_button-wrapper">
-          <button type="button" class="contact-button">
-            <a href="https://t.me/Ines2259" target="_blank">Napisz do mnie</a>
-          </button>
+          <a href="https://t.me/Ines2259" target="_blank">
+            <button type="button" class="contact-button">Napisz do mnie</button></a
+          >
         </div>
       </div>
-
       <div class="about-barber_barber-photo">
         <img src="../../../../../public/img/barber.png" alt="Barber" width="550" height="690" />
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import { VueWriter } from 'vue-writer';
+export default {
+  components: { VueWriter },
+};
+</script>
 
 <style scoped>
 .about-barber_barber-content {
@@ -60,7 +66,9 @@
   background-color: var(--primary-color);
   border: 0;
   border-radius: 1.5rem;
-
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.25rem;
   padding: 30px 70px;
   box-shadow:
     0 1px 3px 0 rgba(0, 0, 0, 0.1),
@@ -71,12 +79,6 @@
 
 .contact-button:hover {
   background-color: rgb(249, 250, 251);
-}
-
-.contact-button a {
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 1.25rem;
 }
 
 .about-barber_barber-photo {
