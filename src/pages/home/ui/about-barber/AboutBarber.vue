@@ -14,12 +14,14 @@
           Przekształćmy razem Twoją pasję w doświadczenie!
         </p>
         <div class="about-barber_button-wrapper">
-          <button type="button" class="contact-button">Napisz do mnie</button>
+          <button type="button" class="contact-button">
+            <a href="https://t.me/Ines2259" target="_blank">Napisz do mnie</a>
+          </button>
         </div>
       </div>
 
       <div class="about-barber_barber-photo">
-        <img src="../../../../../public/img/master.png" alt="Barber" width="550" height="690" />
+        <img src="../../../../../public/img/barber.png" alt="Barber" width="550" height="690" />
       </div>
     </div>
   </section>
@@ -58,9 +60,7 @@
   background-color: var(--primary-color);
   border: 0;
   border-radius: 1.5rem;
-  font-size: 20px;
-  font-weight: 200;
-  line-height: 1.25rem;
+
   padding: 30px 70px;
   box-shadow:
     0 1px 3px 0 rgba(0, 0, 0, 0.1),
@@ -71,6 +71,12 @@
 
 .contact-button:hover {
   background-color: rgb(249, 250, 251);
+}
+
+.contact-button a {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.25rem;
 }
 
 .about-barber_barber-photo {
