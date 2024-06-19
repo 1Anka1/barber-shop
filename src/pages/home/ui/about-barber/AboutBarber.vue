@@ -27,7 +27,7 @@ export default {
         </div>
       </div>
       <div class="about-barber__barber-photo">
-        <img src="@/assets/img/barber.png" alt="Barber" width="550" height="690" />
+        <img src="@/assets/img/barber.png" alt="Barber" />
       </div>
     </div>
   </section>
@@ -39,19 +39,30 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 45px;
+    gap: 20px;
+
+    @include breakpoint($screen-sm) {
+      gap: 45px;
+    }
+
+    @include breakpoint($screen-lg) {
+      display: grid;
+      gap: 130px;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
   }
 
   &__wrapper-details {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 40px;
   }
 
   &__title {
     font-family: var(--secondary-font);
     line-height: 1.3;
-    font-size: 60px;
+    font-size: 45px;
 
     @include breakpoint($screen-md) {
       font-size: 45px;
@@ -59,9 +70,14 @@ export default {
   }
 
   &__information {
-    font-size: 21px;
+    font-size: 15px;
     font-weight: 200;
-    line-height: 2.2rem;
+    line-height: 1.5rem;
+
+    @include breakpoint($screen-md) {
+      font-size: 20px;
+      line-height: 2.2rem;
+    }
   }
 
   &__wrapper-btn {
@@ -73,14 +89,20 @@ export default {
     background-color: var(--primary-color);
     border: 0;
     border-radius: 1.5rem;
-    font-size: 20px;
     font-weight: 200;
-    line-height: 1.25rem;
-    padding: 30px 70px;
+    font-size: 15px;
+    padding: 25px;
+
     box-shadow:
       0 1px 3px 0 rgba(0, 0, 0, 0.1),
       0 1px 2px 0 rgba(0, 0, 0, 0.06);
     transition: background-color 250ms var(--timing-function);
+
+    @include breakpoint($screen-md) {
+      font-size: 20px;
+      line-height: 1.25rem;
+      padding: 30px 70px;
+    }
 
     &:hover {
       background-color: rgb(249, 250, 251);
@@ -88,25 +110,32 @@ export default {
   }
 
   &__barber-photo {
+    display: grid;
     position: relative;
-    display: inline-block;
+    overflow: hidden;
+    place-items: center;
+    width: 100%;
+    max-width: 550px;
 
     &::before,
     &::after {
       position: absolute;
       box-sizing: border-box;
       z-index: 1;
+      width: 100%;
+      height: auto;
     }
 
     &::before {
       content: url('@/assets/img/border-down.png');
-      top: 86%;
+      bottom: -10px;
+      left: 0;
     }
 
     &::after {
       content: url('@/assets/img/border-top.png');
-      bottom: 89%;
-      right: 0;
+      top: -10px;
+      left: 0;
     }
   }
 }

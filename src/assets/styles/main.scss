@@ -44,8 +44,20 @@ body {
   font-family: var(--primary-font);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  padding: 30px 60px;
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+  padding: 20px 40px;
+
+  @include breakpoint($screen-lg) {
+    padding: 30px 60px;
+  }
 }
 
 .section {
