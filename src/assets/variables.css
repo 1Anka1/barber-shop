@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #f3f3f3;
+  --secondary-color: #1d1d1b;
+  --primary-text-color: #030304;
+  --hover-color: #a6843f;
+  --hover-button-color: #ffffff;
+  --primary-font: 'Poppins', sans-serif;
+  --secondary-font: 'Abril Fatface', serif;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
