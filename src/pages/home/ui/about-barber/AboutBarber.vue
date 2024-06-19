@@ -61,8 +61,11 @@ export default {
 
   &__title {
     font-family: var(--secondary-font);
-    line-height: 1.3;
     font-size: 45px;
+    min-height: 2.5em;
+    line-height: 1.2;
+    font-size: 2rem;
+    margin: 0;
 
     @include breakpoint($screen-md) {
       font-size: 45px;
